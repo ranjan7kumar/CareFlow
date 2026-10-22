@@ -1,56 +1,100 @@
-# Welcome to your Expo app 👋
+# CareFlow — Hospital Management Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CareFlow is a React Native mobile application built with Expo and TypeScript.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Hospital home screen with departments and diagnostic services.
+- Staff dashboard with summary cards and quick actions.
+- Doctor directory with search and specialty filters.
+- Doctor profiles and appointment booking.
+- My Bookings screen with cancellation support.
+- Patient search using sample records.
+- Explore departments, diagnostics, and facilities.
+- Three-step patient follow-up workflow.
 
-   ```bash
-   npm install
-   ```
+## Technology Stack
 
-2. Start the app
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- AsyncStorage
+- React Native Safe Area Context
+- Expo Vector Icons
 
-   ```bash
-   npx expo start
-   ```
+## Prerequisites
 
-In the output, you'll find options to open the app in a
+- Node.js and npm
+- Expo Go or a compatible simulator
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Installation
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Install dependencies:
 
-## Get a fresh project
+    npm install
 
-When you're ready, run:
+Start the app:
 
-```bash
-npm run reset-project
-```
+    npx expo start
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+Check TypeScript:
 
-### Other setup steps
+    npx tsc --noEmit
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## Test Cases
 
-## Learn more
+| ID | Test | Expected Result |
+|---|---|---|
+| TC-01 | Open Home | Home screen appears |
+| TC-02 | Open Dashboard | Statistics and quick actions appear |
+| TC-03 | Search doctors | Matching doctors appear |
+| TC-04 | Open doctor profile | Correct doctor details appear |
+| TC-05 | Book appointment | Confirmation appears and booking is saved locally |
+| TC-06 | Open My Bookings | Saved appointments are listed |
+| TC-07 | Cancel appointment | Status changes to Cancelled |
+| TC-08 | Search patients | Matching sample records appear |
+| TC-09 | Complete follow-up workflow | Confirmation shows entered details |
+| TC-10 | Search Explore | Matching services appear |
+| TC-11 | Run TypeScript check | No TypeScript errors |
 
-To learn more about developing your project with Expo, look at the following resources:
+Mark tests Pass or Fail only after manually testing each case.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Data and Limitations
 
-## Join the community
+- Doctor and patient records are sample demonstration data.
+- Appointment records are stored locally using AsyncStorage.
+- The follow-up confirmation is a demonstration; it does not create a real hospital appointment or save information to a clinical backend.
+- The application is a prototype, not a production hospital system.
+- Remote doctor images may require an internet connection.
 
-Join our community of developers creating universal apps.
+## Project Structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+    src/app/
+      _layout.tsx
+      index.tsx
+      dashboard.tsx
+      doctors.tsx
+      doctor-profile.tsx
+      booking.tsx
+      my-bookings.tsx
+      patients.tsx
+      explore.tsx
+      follow-up.tsx
+      follow-up-details.tsx
+      follow-up-confirmation.tsx
+
+## AI Assistance Disclosure
+
+AI tools assisted with code drafting, debugging, navigation flows, and documentation. The developer should review and understand the submitted implementation and update this disclosure to accurately reflect the actual assistance used.
+
+## Submission Checklist
+
+- [ ] Source code or repository link
+- [ ] Required screenshots
+- [ ] Test results with actual Pass/Fail status
+- [ ] Sample input and output
+- [ ] Documentation and results report
+- [ ] Accurate AI assistance disclosure
+- [ ] Actual time spent and external assistance, if required
+
